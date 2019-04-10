@@ -7,11 +7,6 @@
 //
 
 import Foundation
-import UIKit
-import SnapKit
-import ReactiveCocoa
-import ReactiveSwift
-import Result
 
 class ALInputTextFiled: UIView {
     
