@@ -99,28 +99,36 @@ class LoginViewController: UIViewController {
             make.top.equalTo(loginButton.snp.bottom).offset(15)
         }
     }
+    private var isValidUsername: Bool {
+        return accountTextField.inputTextFiled.text!.characters.count > 0
+    }
+    
+    private var isValidPassword: Bool {
+        return passwordTextField.inputTextFiled.text!.characters.count > 0
+    }
     
     // 绑定viewModel
     func bindViewModel() {
         
-        let accpuntSignal = accountTextField.inputTextFiled.reactive.continuousTextValues
-
-        let pawsSignal = passwordTextField.inputTextFiled.reactive.continuousTextValues
-
-//
-        let validSignal = Signal.combineLatest(accpuntSignal, pawsSignal).map{
-
-           return $0 && $1
+        let accpuntSignal = accountTextField.inputTextFiled.reactive.continuousTextValues.map{
+            text in
+            return self.isValidUsername
         }
         
-//        accountTextField.inputTextFiled.reactive.text <~ self.loginViewModel.validAccount
-//        passwordTextField.inputTextFiled.reactive.text <~ self.loginViewModel.validPassword
+        let pawsSignal = passwordTextField.inputTextFiled.reactive.continuousTextValues.map{
+            text in
+            return self.isValidPassword
+        }
+//        方法一
+//        Signal.combineLatest(accpuntSignal, pawsSignal).map {
+//            (isValidUsername, isValidPassword) in
 //
-//        self.loginViewModel.validAccount <~ accountTextField.inputTextFiled.reactive.text
-        
-        
-        self.loginButton.reactive.isEnabled <~ loginViewModel.loginEnableSignal
-        
+//            return isValidUsername && isValidPassword
+//            }.observeValues { (signupActive) in
+//                self.loginButton.isEnabled = signupActive
+//        }
+//        方法二
+        loginButton.reactive.isEnabled <~ Signal.combineLatest(accpuntSignal, pawsSignal).map { $0 && $1 }
         loginButton.reactive.controlEvents(.touchUpInside).observeValues { (button) in
             print("登录按钮")
         }
