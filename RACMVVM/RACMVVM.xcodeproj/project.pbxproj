@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530C05382268784300232921 /* RequestCommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530C05372268784200232921 /* RequestCommonError.swift */; };
 		530D25EF2255EF7D0003282A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D25EE2255EF7D0003282A /* AppDelegate.swift */; };
 		530D25F42255EF7D0003282A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530D25F22255EF7D0003282A /* Main.storyboard */; };
 		530D25F62255EF7E0003282A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530D25F52255EF7E0003282A /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0FC864AD81A3A3CE1171CA95 /* Pods-RACMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACMVVM.debug.xcconfig"; path = "Target Support Files/Pods-RACMVVM/Pods-RACMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		530C05372268784200232921 /* RequestCommonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCommonError.swift; sourceTree = "<group>"; };
 		530D25EB2255EF7D0003282A /* RACMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530D25EE2255EF7D0003282A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		530D25F32255EF7D0003282A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				530D26202255F24F0003282A /* HomeViewController.swift */,
 				530D26242255F2F80003282A /* LoginViewController.swift */,
 				530D262E2255F8510003282A /* LoginViewModel.swift */,
+				530C05372268784200232921 /* RequestCommonError.swift */,
 				530D25F22255EF7D0003282A /* Main.storyboard */,
 				530D25F52255EF7E0003282A /* Assets.xcassets */,
 				530D25F72255EF7E0003282A /* LaunchScreen.storyboard */,
@@ -356,6 +359,7 @@
 				530D26252255F2F80003282A /* LoginViewController.swift in Sources */,
 				530D26272255F4B60003282A /* UIButton+ALExtension.swift in Sources */,
 				530D262B2255F58D0003282A /* UIColor+ALExtension.swift in Sources */,
+				530C05382268784300232921 /* RequestCommonError.swift in Sources */,
 				530D262F2255F8510003282A /* LoginViewModel.swift in Sources */,
 				530D26212255F24F0003282A /* HomeViewController.swift in Sources */,
 			);
